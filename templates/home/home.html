@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<style>
+img {
+    background: #ffc0c0;
+    padding:7px;
+    border-radius: 80%;
+}
+</style>
+{% block typedtextjs %}
+<script>
+     var typed = new Typed('#typed',{
+                    strings:["BeCoder is a blog where you can easily read anything related to computer science and programming.","Enjoy your computer science and programming journey."],
+                    backSpeed: 15,
+                    smartBackspace: true,
+                    backDelay: 1200,
+                    startDelay: 1000,
+                    typeSpeed: 25,
+                    loop: false,
+                  });
+    </script>
+{% endblock typedtextjs %}
+{% endblock css %}
+{% block title %}Home - BeCoder{% endblock title %}
+{% block homeactive %}active{% endblock homeactive %}
+
+{% block body %}
+<!--Header part of the website-->
+<div class="jumbotron">
+  <a href="/"><img src="/static/img/logo.png" width="80" alt="logo"></a>
+  <p class="lead"><b><span id="typed"></span></b></p>
+  <a class="btn btn-danger btn-md" href="/blog" role="button">Blog</a>
+  <a class="btn btn-success btn-md" href="/contact" role="button">Contact</a>
+</div>
+<!--All cards are here-->
+<!--First Starts Here-->
+<div class="container">
+<div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">BeCoder</strong>
+          <h3 class="mb-0">Blog</h3>
+          <div class="mb-1 text-muted">From our blog</div>
+          <p class="card-text mb-auto">Confused about what to learn ? Please Click Below and access all our blog posts to learn cs and programming</p>
+          <div class="button my-3">
+          <a href="/blog" class="btn btn-warning" role="button">Blog</a>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--First Ends Here-->
+<!--Second Starts Here-->
+<div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Design</strong>
+          <h3 class="mb-0">Contact Me!</h3>
+          <div class="mb-1 text-muted">Contact me</div>
+          <p class="mb-auto">You can contact me and ask your query just by clicking below. We will surely reply your question within one day.</p>
+          <div class="btnn my-3">
+          <a href="/contact" class="btn btn-danger" role="buttton">Contact Me!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--Second Ends Here-->
+<div id="typed-strings">
+  </div>
+{% endblock body %}
